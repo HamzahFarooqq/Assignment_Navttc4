@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task23</title>
+  </head>
+  <body>
+    Value of x:
+    <input type="number" id="num1" /><br /><br />
+    value of y:
+    <input type="number" id="num2" /><br /><br />
+    <button onclick="sum()">Calculate Sum</button>
+    <button onclick="minus()">Calculate Subtraction</button>
+    <button onclick="multiply()">Calculate Multiplication</button>
+
+    <p id="displaysum"></p>
+    <p id="displayminus"></p>
+    <p id="displaymultiply"></p>
+
+    <script>
+      function sum() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+
+        let x = parseInt(a);
+        let y = parseInt(b);
+
+        let sum = x + y;
+
+        let displaySumElement = document.getElementById("displaysum");
+        displaySumElement.innerText = "the sum of x and y is: " + sum;
+      }
+
+      function minus() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+
+        let x = parseInt(a);
+        let y = parseInt(b);
+
+        let minus = x - y;
+
+        let displayMinusElement = document.getElementById("displayminus");
+        displayMinusElement.innerText =
+          "the subtraction of x and y is: " + minus;
+      }
+
+      function multiply() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+
+        let x = parseInt(a);
+        let y = parseInt(b);
+
+        let multiply = x * y;
+
+        let displayMultiplyElement = document.getElementById("displaymultiply");
+        displayMultiplyElement.innerText =
+          "the Multiplication of x and y is: " + multiply;
+      }
+    </script>
+  </body>
+</html>
