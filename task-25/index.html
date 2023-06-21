@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .box1 {
+        height: 50px;
+        width: 150px;
+        background-color: burlywood;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto;
+      }
+      .box2 {
+        height: 100px;
+        width: 150px;
+        background-color: bisque;
+        margin: 0 auto;
+        overflow: scroll;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Make a button that slides down some content when clicked using jQuery. -->
+
+    <div class="box1">button</div>
+    <div class="box2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At tenetur
+      recusandae reiciendis, atque dolor rerum nostrum ipsam neque doloribus
+      obcaecati!
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".box1").click(function () {
+          $(".box2").slideDown();
+        });
+      });
+    </script>
+  </body>
+</html>
