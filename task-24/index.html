@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task24</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Make a paragraph line and two buttons named “hide” and 
+    “show” using HTML and hide the paragraph if the button 
+    “hide” is clicked, and show the paragraph if the button 
+    “show” is clicked. -->
+
+    <p>
+      this paragraph will 'hide' and 'show' when the respective buttons will be
+      pressed.
+    </p>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("p").hide();
+        });
+
+        $("#btn2").click(function () {
+          $("p").show();
+        });
+      });
+    </script>
+  </body>
+</html>
